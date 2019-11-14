@@ -1,1 +1,12 @@
-index.html.erb
+<h1>My Cocktails</h1>
+
+<%@cocktails.each do |cocktail| %>
+<li>
+<%= cocktail.name %>
+<%= link_to "See details", cocktail_path(cocktail), class: "btn btn-primary"%>
+</li>
+<% end %>
+
+<div class="margin20">
+<%= link_to "Add a new", new_cocktail_path %>
+</div>
