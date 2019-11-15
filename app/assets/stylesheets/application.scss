@@ -11,3 +11,14 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.container {
+  display: flex
+}
+
+
+
+.margin20 {
+  margin-top: 20px;
+  margin-left: 10px;
+}

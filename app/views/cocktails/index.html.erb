@@ -1,15 +1,12 @@
-<h1>My Cocktails</h1>
 
-<%@cocktails.each do |cocktail| %>
-<li>
-<%= cocktail.name %>
-<%= link_to "See details", cocktail_path(cocktail), class: "btn btn-primary"%>
-</li>
-<% end %>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.lesechos.com/api/v1/images/view/5cdd48458fe56f30424c5a58/1280x720/ecwe00128018-1.jpg);">
 
-<%= cl_image_tag("jlla1e7pekcniugocvv3",
-      width: 400, height: 300, crop: :fill) %>
+    <h1>My Cocktails</h1>
+  </div>
 
-<div class="margin20">
-<%= link_to "Add a new", new_cocktail_path %>
+<div class="container">
+    <%@cocktails.each do |cocktail| %>
+    <%= render 'components/card', cocktail: cocktail%>
+    <% end %>
 </div>
+
