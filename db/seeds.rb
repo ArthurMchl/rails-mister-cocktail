@@ -1,19 +1,19 @@
-# Ingredient.destroy_all
+Ingredient.destroy_all
 
-# require 'open-uri'
-# require 'json'
+require 'open-uri'
+require 'json'
 
-# ingredients = []
+ingredients = []
 
-# url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
-# ingredients_list = open(url).read
-# list = JSON.parse(ingredients_list)
+url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+ingredients_list = open(url).read
+list = JSON.parse(ingredients_list)
 
-# list["drinks"].each do |ingredient|
-#   Ingredient.create(name: ingredient["strIngredient1"])
+list["drinks"].each do |ingredient|
+  Ingredient.create(name: ingredient["strIngredient1"])
 
-# end
+end
 
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
+# Ingredient.create(name: "lemon")
+# Ingredient.create(name: "ice")
+# Ingredient.create(name: "mint leaves")
